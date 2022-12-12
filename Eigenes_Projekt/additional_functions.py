@@ -146,3 +146,33 @@ def get_epa_data(param: int,year: int,site: int,folder: str,check_exists=True,on
         print(f"Sucessfully get: Year: {year}, Parameter: {param}, Site: {site}")
         sleep(5)
     return 
+
+def change_pollution_unit(df_column,start_unit: str, pollutant: str):
+    """Change the Unit of the pollution. The Formula is shown in the get_Data_AirPollution file.
+
+    Args:
+        df_column (pd.DataFrame or pd. Series): Columns you want to change the unit (only columns of the same pollutant)
+        start_unit (str): Choose from "ppm" and "ppb"
+        pollutant (str): Choose from no2, co, so2,o3
+
+    Returns:
+        pd.DataFrame: now with the correct unit
+    """
+    #molare Masse für jeden Schadstoff in g/mol
+    M={"no2":46,"o3":48,"so2":64,"co":28}
+    try: 
+        M=M[pollutant]
+    except:
+        print("Pollutant isnt key in dict")
+    # convert to ppb if necesssary
+    if start_unit=="ppm":
+        x=df_column
+    elif start_unit=="ppb":
+        x=df_column/1000
+    
+    p=1000
+    r=8.314
+    t=300
+    
+    y= (0.1 * M * p * x * 1000)/(r*t)
+    return y
