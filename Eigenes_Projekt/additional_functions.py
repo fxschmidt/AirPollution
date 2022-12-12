@@ -5,16 +5,15 @@ import json
 from time import sleep
 import requests as requests
 
-def calc_aqi(df,return_string=False,whitout_pm10=True):
+def calc_aqi(df,whitout_pm10=True):
     """Calulate the AirQualityIndex for the five key pollutants (poorest level counts). 
     For more see the Dokumentation Folder. The concentrations should be in micro g/m3
 
     Args:
         df (pd.DataFrame): DataFrame which contain the pollutants
-        return_string(Boolean): True if a string with the description should be returned
         without_pm10 (Noolean): If the df contains no pm10 column
     Return:
-        int: 0 to 5 which represents the quality levels (if retrun_string False)
+        int: 0 to 5 which represents the quality levels
         list of str: pollutant which is too high
     """
     if whitout_pm10:
@@ -91,19 +90,15 @@ def calc_aqi(df,return_string=False,whitout_pm10=True):
             
     # choose the highest AQI Value
     pollutants = ["pm2_5","pm10","o3","no2","so2"]
-    aqi_index = np.array([pm2_5,pm10,o3,no2,so2])
-    aqi_max = np.max(aqi_index)
+    aqi_values = np.array([pm2_5,pm10,o3,no2,so2])
+    aqi_max= np.max(aqi_values)
     # which value is too high, return the pollutant only if level is above fair
     if aqi_max>=1:
-        aqi_max_idx = np.argwhere(aqi_index == aqi_max)
+        aqi_max_idx = np.argwhere(aqi_max == aqi_max)
         aqi_max_pollutant = [pollutants[i] for i in aqi_max_idx.flatten().tolist()]
     else:
         aqi_max_pollutant=[]
-    if return_string:
-        description=["Good","Fair","Moderate","Poor","Very poor","Extremely poor"]
-        return description[aqi_max] , aqi_max_pollutant
-    else: 
-        return aqi_max,aqi_max_pollutant
+    return aqi_max,aqi_max_pollutant
     
 def get_epa_data(param: int,year: int,site: int,folder: str,check_exists=True,only_get_path=False ):
     """Get the data from one of the sites in LA on a daily base
