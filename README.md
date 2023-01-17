@@ -8,7 +8,13 @@ Dieses Repository beinhaltet alle für die Abgabe nötigen Datein:
  - einige Hintergrund-Informationen (z.B. Paper zum Thema) im Ordner *Dokumentation*
  - die aus der API erhaltenen Daten in den Ordnern *Pollution_Data* und *Predictor_Data* 
 
+## Einleitung
+- Warum LA
+- und allgemeine einleitung
+
 ## Ziele 
+
+## Schadstoffe
 
 ## Übersicht 
 

@@ -1,1 +1,40 @@
-"No matching service was found, please check spelling and case. Link to API Documentation: https://aqs.epa.gov/aqsweb/documents/data_api.html"
+{
+    "Header": [
+        {
+            "status": "Success",
+            "request_time": "2023-01-17T11:31:44-05:00",
+            "url": "https://aqs.epa.gov/data/api/list/parametersByClass?email=felixsch00%40outlook.de&key=goldfox88&pc=AQI+POLLUTANTS",
+            "rows": 7
+        }
+    ],
+    "Data": [
+        {
+            "code": "42101",
+            "value_represented": "Carbon monoxide"
+        },
+        {
+            "code": "42401",
+            "value_represented": "Sulfur dioxide"
+        },
+        {
+            "code": "42602",
+            "value_represented": "Nitrogen dioxide (NO2)"
+        },
+        {
+            "code": "44201",
+            "value_represented": "Ozone"
+        },
+        {
+            "code": "81102",
+            "value_represented": "PM10 Total 0-10um STP"
+        },
+        {
+            "code": "88101",
+            "value_represented": "PM2.5 - Local Conditions"
+        },
+        {
+            "code": "88502",
+            "value_represented": "Acceptable PM2.5 AQI & Speciation Mass"
+        }
+    ]
+}
