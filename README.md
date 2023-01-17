@@ -1,4 +1,7 @@
-# Abgabe für den Kurs Data-Science mit Python
+# Air Pollution Data-Science Projekt
+
+Abgabe für den Kurs Data-Science mit Python im WS 22  
+von Felix Schmidt, Matrikelnr: 5448377
 
 Dieses Repository beinhaltet alle für die Abgabe nötigen Datein:  
  - Jupyter Notebooks (als .ipynb und .html)
