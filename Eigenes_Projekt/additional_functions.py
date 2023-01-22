@@ -1,4 +1,4 @@
-"Zusätzliche Funktionen für die Datenanalyse"
+"Zusätzliche Funktionen für die Jupyter Notebooks"
 import numpy as np
 import os
 import json

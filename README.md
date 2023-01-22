@@ -15,7 +15,13 @@ Dieses Repository beinhaltet alle für die Abgabe nötigen Datein:
 ## Ziele 
 
 ## Schadstoffe
+Mehr Infos über die einzelnen Schadstoffe sind bei der [EPA](https://www.epa.gov/criteria-air-pollutants) oder auf den jeweiligen Wikipedia-Artikeln zu finden. 
 
 ## Übersicht 
+
+### get_prepare_data.ipynb
+In diesem Notebook werden die Daten der Schadstoffe und der Predictoren dafür aus den unterschiedlichen Quellen (API, selbst heruntergeladene .csv Datein oder selbst erstellte Daten) zusammengefügt und für eine Datenanalyse vorbereitet. 
+
+### exploratory_data_analysis.ipynb
 
 ## Resultate
