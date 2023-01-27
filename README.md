@@ -17,9 +17,6 @@ Da Luftverschmutzung in Städten ist aus vielen Perspektiven ein wichtiges Thema
   
 Es wurde Los Angeles gewählt, da diese Stadt eine hohe Luftverschmutzung aufweist. Außerdem dacht ich das in Amerika mehr Daten im Internet frei zur Verfügung stehen (nach dem Projekt bin ich mir dessen nicht mehr sicher).
 
-
-## Ziele 
-
 ## Schadstoffe
 Mehr Infos über die einzelnen Schadstoffe sind bei der [EPA](https://www.epa.gov/criteria-air-pollutants) oder auf den jeweiligen Wikipedia-Artikeln zu finden.   
 In Kurzform:
@@ -28,14 +25,14 @@ In Kurzform:
 - **SO2 Schwefeldioxid**: Durch schwefelhaltige Brennstoffe bei Verbrennungsprozessen verursacht. Durch Rauchgasentschwefelung und Grenzwerte für Schwefel in den Kraftstoffen, nur noch im Schiffsverkehr problematisch. 
 - **PM2.5 bzw. PM10 Feinstaub**: Mit einer Größe von weniger als 2.5 / 10 Mikrometer. Entsteht ebenfalls bei Verbrennungsprozessen, aber auch Reifen-/Bremsenabrieb und  je nach Größe kann dieser bis in die Lunge/Blutkreislauf eindringen. 
 
-## Übersicht der Notebooks
+## Übersicht und Ziele der Notebooks
 
 ### get_prepare_data.ipynb
-In diesem Notebook werden die Daten der Schadstoffe und der Predictoren dafür aus den unterschiedlichen Quellen (API, selbst heruntergeladene .csv Datein oder selbst erstellte Daten) zusammengefügt und für eine Datenanalyse vorbereitet. 
+In diesem Notebook werden die Daten der Schadstoffe und der Predictoren dafür aus den unterschiedlichen Quellen (API, selbst heruntergeladene .csv Datein oder selbst erstellte Daten) zusammengefügt und für eine Datenanalyse vorbereitet werden. 
 
 ### exploratory_data_analysis.ipynb
 
-Explorative Datenanalyse um mögliche Zusammenhänge zwischen den Schadstoffkonzentrationen und den weiteren Daten zu ermitteln. Diese könnten wichtig sein um gezielt Gegenmaßnahmen zu treffen. 
+Explorative Datenanalyse um mögliche Zusammenhänge zwischen den Schadstoffkonzentrationen und den weiteren Daten zu ermitteln. Diese könnten wichtig sein um gezielt Gegenmaßnahmen zu treffen oder auch um z.B. beim machine learning bessere Entscheidungentreffen zu können (Welche Features kann ich weglassen um mehr Daten behalten zu können?).
 
 ### machine_learning.ipynb
 In diesem Notebook werden verschiedenen ML-Modelle getestet.  
